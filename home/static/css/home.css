@@ -1,0 +1,379 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+ }
+
+
+.d1
+{
+    height: 10vh;
+    width:100%;
+    background-color: rgb(28, 28, 36);
+    margin: 0;
+    display: flex;
+    position: relative;
+}
+.i1
+{
+    height: 35px;
+    width:85px;
+    position: absolute;
+    margin: 1% 0 0 0.3%;
+    background-color: rgb(28, 28, 36);
+    
+} 
+
+.a1
+{
+    text-decoration: none;
+    margin-top: 3vh;
+    margin-left: 7vw;
+    font-size: larger;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.select
+{
+    background-color: rgb(28, 28, 36);
+    border: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    margin-left: 14%;
+    margin-top: 16%;
+    appearance: none;
+    outline:none;
+}
+
+.s1
+{
+    background: white;
+    color: rgb(28, 28, 36);
+}
+.a2
+{
+    text-decoration: none;
+    margin-top: 3vh;
+    margin-left: 2vw;
+    font-size: larger;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;  
+    
+    
+}
+.d12
+{
+    height:5vh;
+    width:20vw;
+    background-color: white;
+    margin: 7% 0 0 10%;
+    display: flex;
+    border-radius: 15px 15px 15px 15px;
+    
+    
+}
+.in1
+{
+    margin-left: 5%;
+    height:5vh;
+    width:14vw;
+    font-size: larger;
+    outline: none;
+    border: none;
+    
+   
+}
+.b1
+{
+   
+    height: 4vh;
+    width:2vw;
+    margin-left: 10%;
+    margin-top: 1.5%;
+    background-color: white;
+    border: none;
+    
+}
+.glass
+{
+    font-size: larger;
+}
+.a3
+{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    margin: 1.5% 0 0 27%;
+    color: white;
+}
+.a4
+{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    margin: 1.5% 0 0 5%;
+    color: white;
+}
+.carosel
+{
+    height: 75vh !important;
+    width:90vw !important;
+    margin: 2% 0 0 5% !important;
+}
+.ad2
+{
+    height: 75vh !important;
+    width:90vw !important;
+    size: 10px 100px!important;
+}
+.ad3
+{
+    height: 75vh !important;
+    width:90vw !important;
+    size: 10px 100px!important;
+}
+
+
+
+
+
+.ii
+{
+   height: 74vh !important;
+   width: 100% !important;
+}
+
+.d21
+{
+    height: 12vh;
+    width:28vw;
+    margin: 5% 0 0 5%;
+    background-color: rgb(255, 255, 255);
+}
+
+.h1
+{
+   
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+}
+.d3
+{
+    height: 54vh;
+    width:90vw;
+    background-color: rgb(255, 249, 249);
+    margin: 2% 0 0 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.d4
+{
+    height: 46vh;
+    width:20vw;
+    background-color: rgb(236, 236, 236);
+    margin: 2% 0 0 2%;
+    border-radius: 5px;
+    border: 1px solid rgb(80, 80, 80);
+    
+}
+.d5
+{
+    height: 32vh;
+    width:19.7vw;
+    background-color: rgb(238, 199, 192);
+    margin: 0.3% 0 0 0.2%;
+    border-radius: 5px;
+}
+.d51
+{
+    height: 5vh;
+    width: 18.8vw;
+    background-color: rgb(236,236,236);
+    margin: 1% 0 0 0 ;
+    display: flex;
+    justify-content: center;
+}
+.d52
+{
+    height: 7vh;
+    width: 18.8vw;
+    background-color: rgb(255, 255, 255);
+    margin: 1% 0 0 0 ;
+    display: flex;
+    justify-content:space-between;
+}
+.ad4
+{
+    text-decoration: none;
+}
+.b2
+{
+    height: 6vh;
+    width:7vw;
+    background-color: rgb(84, 84, 163);
+    border-radius: 28px;
+    margin: 1% 0 0 3%;
+    font-weight: bold;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    outline: none;
+
+}
+.dh1
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    font-weight:600;
+    color: rgb(146, 147, 150);
+    font-weight: lighter;
+}
+.dh2
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    font-weight:600;
+    margin: 2% 3% 0 0;
+    
+}
+.ip
+{
+    height: 30vh;
+    width:18vw;
+    margin: 1% 0 0 3%;
+}
+
+.dpage
+{
+    height: 10vh;
+    width:15vw;
+    background-color: rgb(255, 255, 255);
+    margin: 25% 0 0 5%;
+    display: flex;
+}
+.arleft
+{
+    font-size: xx-large;
+    margin: 8% 0 0 10%;
+    color: rgb(133, 132, 132);
+}
+.dpage1
+{
+    height: 5.6vh;
+    width: 2.5vw;
+    background-color: antiquewhite;
+    margin: 1% 0 0 3% ;
+    border-radius: 18px;
+    background-color: rgb(83, 108, 221);
+    display: flex;
+}
+.dpage2
+{
+    height: 5.6vh;
+    width: 2.5vw;
+    background-color: antiquewhite;
+    margin: 1% 0 0 3% ;
+    border-radius: 18px;
+    background-color: rgb(83, 108, 221);
+    display: flex;
+}
+.dpage3
+{
+    height: 5.6vh;
+    width: 2.5vw;
+    background-color: antiquewhite;
+    margin: 6% 0 0 3% ;
+    border-radius: 18px;
+    background-color: rgb(83, 108, 221);
+    display: flex;
+}
+.arright
+{
+    font-size: xx-large;
+    margin: 7.5% 0 0 12%;
+    color: rgb(133, 132, 132);
+ 
+}
+.ph
+{
+    font-size: x-large;
+    color: white;
+    margin: 10% 0 0  32%;
+    display: inline-block;
+    
+}
+.ad
+{
+    text-decoration: none;
+    color: white;
+}
+.db
+{
+    height: 23vh;
+    width:100%;
+    background-color: rgb(18, 15, 26);
+    display: flex;
+}
+.db1
+{
+    height: 20vh;
+    width:18vw;
+    background-color: rgb(18, 15, 26);
+    margin: 1% 0 0 5%;
+}
+.db1h1
+{
+    font-size: x-large;
+    margin: 2% 0 0 0;
+    color: white;
+    
+}
+.db1h2
+{
+    font-size: medium;
+    margin: 3% 0 0 0;
+    color:white;
+    font-weight: lighter;
+
+}
+.db2
+{
+    height: 20vh;
+    width:18vw;
+    background-color: rgb(18, 15, 26);
+    margin: 1% 0 0 8%;
+}
+.dba
+{
+    text-decoration: none;
+    font-size: small;
+    color: white;
+}
+.db3
+{
+    height: 20vh;
+    width:18vw;
+    background-color: rgb(18, 15, 26);
+    margin: 1% 0 0 8%;
+}
+.db4
+{
+    height: 20vh;
+    width:16vw;
+    background-color: rgb(18, 15, 26);
+    margin: 1% 0 0 5%;
+}
+.db1h3
+{
+    font-size: large;
+    margin: 10% 0 0 0;
+    color:white;
+}
+.logo
+{
+    font-size: x-large;
+    margin: 3% 0 0 5%;
+    color: white;
+}
