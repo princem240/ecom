@@ -1,0 +1,117 @@
+{% load static %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="{% static 'css/view.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<body>
+    <div class="d1">
+        <img src="{% static 'images/logo.png' %}" class="i1" alt="">
+        <a href="/" class="a1">Home</a>
+        <form action="/filter" method="post">
+          {% csrf_token  %}
+        <select  class="select">
+            <option value="default" selected disabled hidden>Categories</option>
+            <option value="Laptops" class="s1">Laptops</option>
+            <option value="Smartphones"  class="s1">Smartphones</option>
+            <option value="Headphones"  class="s1">Headphones</option>
+            <option value="Tv"  class="s1">Tv</option>
+            <option value="Speakers"  class="s1">Speakers</option>
+          </select>
+        </form>
+          <a href="/" class="a2">About</a>
+          <a href="/" class="a2">Contact</a>
+         <div class="d12"><input type="text" class="in1"><button type="submit" class="b1"><i class="fa-solid glass fa-magnifying-glass"></i></button></div> 
+         <a href="/cart" class="a3">Cart</a>
+         {% if user.is_authenticated %}
+         <a href="/" class="a4">{{user.username}}</a>
+         <a href="/logout" class="a4">Logout</a>
+         {% else %}
+
+         <a href="/login" class="a4">Login</a>
+         {%endif%}
+    </div>
+
+    <div class="dav1"><a href="/" class="av1">GO BACK</a></div>
+    <div class="d2main">
+    <div class="d2">
+      <div class="carousel" data-carousel>
+        <button class="carousel-button prev" data-carousel-button="prev">&#10232;</button>
+        <button class="carousel-button next" data-carousel-button="next">&#10233;</button>
+        <ul data-slides>
+          <li class="slide" data-active>
+            <img src="{{p.image1.url}}" class="ci1"alt="Nature Image #1">
+          </li>
+          <li class="slide">
+            <img src="{{p.image2.url}}" class="ci1"alt="Nature Image #2">
+          </li>
+          <li class="slide">
+            <img src="{{p.image3.url}}" class="ci1"alt="Nature Image #3">
+          </li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <div class="d21">
+        <div class="d211"><h2 class="d2h1">{{p.name}}</h2></div>
+        <hr class="line">
+        <div class="d212"><h2 class="d2h2">Price:{{p.price}}</h2></div>
+        <hr class="line">
+        <div class="d213"><h2 class="d2h3">Description: <br><p class="d2p1">{{p.desc}}</p></h2></div>
+        <hr class="line">
+        <div class="d214">
+        <div>
+          <form action="" method="post">
+            {% csrf_token  %}
+          <h2 class="d2h4">Qty:
+            <select id="qty" name="qty" class="qty">
+            <option value="default" selected disabled hidden></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select></h2></div>
+          <input type="submit" value="Add To Cart" class="icart">
+        </form>
+        </div>
+    </div>
+    </div>
+
+
+<br>
+<br><br><br>
+<br>
+<br><br><br>
+<br>
+<br><br><br>
+
+
+
+
+
+<script src="{% static 'js/view.js' %}"></script>
+</body>
+</html>

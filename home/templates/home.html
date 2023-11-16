@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<body>
+    <div class="d1">
+        <img src="{% static 'images/logo.png' %}" class="i1" alt="">
+        <a href="/" class="a1">Home</a>
+        <form action="/filter" method="post">
+          {% csrf_token  %}
+         <select  class="select" name="filter" onchange="this.form.submit()">
+            <option value ="default" selected disabled hidden>Categories</option>
+            <option value="1" class="s1">Laptops</option>
+            <option value="2"  class="s1">Smartphones</option>
+            <option value="3"  class="s1">Headphones</option>
+            <option value="4"  class="s1">Tv</option>
+            <option value="5"  class="s1">Speakers</option>
+          </select>
+          </form>
+          <a href="/" class="a2">About</a>
+          <a href="/" class="a2">Contact</a>
+          <form action="/search" method="post">
+            {% csrf_token  %}
+         <div class="d12"><input type="text" name="search" class="in1"><button type="submit" class="b1"><i class="fa-solid glass fa-magnifying-glass"></i></button></div> 
+        </form>
+         <a href="/cart" class="a3">Cart</a>
+         {% if user.is_authenticated %}
+         <a href="/" class="a4">{{user.username}}</a>
+         <a href="/logout" class="a4">Logout</a>
+         {% else %}
+
+         <a href="/login" class="a4">Login</a>
+         {%endif%}
+    </div>
+
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner carosel">
+          <div class="carousel-item active">
+            <img src="{% static 'images/ad1.jpg' %}" class="d-block w-100  ii" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'images/ad2.jpg' %}" class="d-block w-100 ad2 " alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'images/ad3.jpg' %}" class="d-block w-100 ad3" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev cb1" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon cb1" aria-hidden="true"></span>
+          <span class="visually-hidden ">Previous</span>
+        </button>
+        <button class="carousel-control-next cb2" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+    <div class="d21">
+      <h1 class="h1">Our Latest Product</h1>
+
+    </div> 
+    
+    <div class="d3">
+    {% for i in p %}
+      <a href="/view/{{i.id}}" class="ad4"><div class="d4">
+        <div class="d5"> <img src="{{ i.image1.url}}" class="ip" alt=""></div>
+
+        
+        <div class="d51"><h1 class="dh1">{{i.name}}</h1></div>
+        <div class="d52">
+          <a href="/view/{{i.id}}"><button class="b2"> Buy Now</button></a><h1 class="dh2">${{i.price}}</h1>
+        </div>
+      </div></a>
+      {% endfor%}
+    </div>
+
+    <div class="dpage">
+      {%if p.has_previous %}
+      <a href="?page={{p.previous_page_number}}"class="ad"><i class="fa-solid  arleft fa-arrow-left"></i></a>
+      <a href="?page={{p.previous_page_number}}"class="ad"><div class="dpage1"><h3 class="ph">{{p.previous_page_number}}</h1></div></a>
+      {%endif%}     
+      <div class="dpage2"><h3 class="ph"><a href=""class="ad">{{p.number}}</a></h1></div>
+      {%if p.has_next %} 
+      <a href="?page={{p.next_page_number}}"class="ad"><div class="dpage3"><h3 class="ph">{{p.next_page_number}}</h1></div></a>
+        <a href="?page={{p.next_page_number}}"class="ad"><i class="fa-solid  arright fa-arrow-right"></i></a>
+      {%endif%} 
+    </div>
+
+    <div class="db">
+      <div class="db1">
+        <h1 class="db1h1">Contact</h1>
+        <h2 class="db1h2"> One Apple Park Way</h1>
+          <h2 class="db1h2">MS 927-4INV</h1>
+            <h2 class="db1h2">Cupertino, CA 95014</h1>
+      </div>
+      <div class="db2">
+        <h1 class="db1h1">About</h1>
+        <a href="" class="dba">About Us</a><br>
+        <a href="" class="dba">Privacy Policy</a><br>
+        <a href="" class="dba">Terms & Conditions</a><br>
+        <a href="" class="dba">Contact</a>
+
+      </div>
+      <div class="db3">
+        <h1 class="db1h1">My Account</h1>
+        <a href="" class="dba">Sign In</a><br>
+        <a href="" class="dba">My Cart</a><br>
+        <a href="" class="dba">Log Out</a><br>
+        <a href="" class="dba">Help</a>
+
+
+      </div>
+      <div class="db4">
+        <h1 class="db1h3">Connect With Us</h1>
+        <i class="fa-brands logo fa-facebook"></i><i class="fa-brands logo fa-twitter"></i>
+        <i class="fa-brands logo  fa-instagram"></i><i class="fa-brands logo fa-whatsapp"></i>
+
+      </div>
+    </div>
+      
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</html>
